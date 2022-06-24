@@ -1,0 +1,32 @@
+:host{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: .5rem;
+    padding: 1.125rem 1rem;
+    background-color: #FFF;
+    margin-top: 1rem;
+    border-radius: .5rem;   
+    
+    
+    .control-icon {
+            
+                
+                font-size: 1.5rem;
+                color: hsl(5deg 63% 73%);
+            
+        }
+    }
+
+
+.control__input{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--first-color-dark);
+    &::placeholder{
+        font-size: 1rem;
+        font-family: var(--body-font);
+        color: var(--first-color-light);
+    }
+}

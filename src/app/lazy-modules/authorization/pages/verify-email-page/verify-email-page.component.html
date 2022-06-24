@@ -1,0 +1,19 @@
+<div class="content_verify card">
+    <h3>Thank You for Registering</h3>
+
+    <div class=""
+         *ngIf="authService.userData as user">
+        <p class="">
+            We have sent a confirmation email to <strong>{{ user.email }}</strong>.
+        </p>
+        <p class="">
+            Please check your email and click on the link to verfiy your email
+            address.
+        </p>
+    </div>
+
+    <app-button (buttonClick)="authService.SendVerificationMail()"> Resend Verification Email </app-button>
+
+    <p>Go back to? <span class="login__signin"
+              (click)="goToSignIn()">sign in</span></p>
+</div>

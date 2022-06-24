@@ -1,0 +1,59 @@
+<!-- <div class="content_auth card">
+    <h3>Sign In</h3>
+    <form [formGroup]="signInForm"
+          (ngSubmit)="authService.SignIn(userName.value, userPassword.value)">
+        <input type="text"
+               class=""
+               placeholder="Email"
+               formControlName="email"
+               #userName
+               required />
+        <input type="password"
+               class=""
+               formControlName="password"
+               placeholder="Password"
+               #userPassword
+               required />
+        <button [disabled]="signInForm.invalid"
+                class="">
+            Sign in
+        </button>
+    </form>
+    <span class="or"><span class="">Or</span></span>
+    <a routerLink="/forgot-password">Forgot Password?</a>
+    <div class="">
+        <span>Don't have an account?
+            <a class=""
+               routerLink="/sign-up"> Sign Up </a>
+        </span>
+    </div>
+</div> -->
+
+
+<form action=""
+      class="login__registre"
+      [formGroup]="signInForm"
+      (ngSubmit)="onSubmit()">
+    <h1 class="login__title">Sign In</h1>
+
+    <app-text-control-with-icon formControlName="email"
+                                placeholder="Email">
+        <i class='bx bx-at control-icon'></i>
+    </app-text-control-with-icon>
+    <app-text-control-with-icon formControlName="password"
+                                placeholder="Password">
+        <i class='bx bx-lock-alt control-icon'></i>
+    </app-text-control-with-icon>
+
+
+    <a class="login__forgot"
+       (click)="goToForgotPassword()">Forgot password?</a>
+
+    <app-button behaviorType="submit">Sign In</app-button>
+
+    <div>
+        <span class="login__account">Don't have an Account ?</span>
+        <span class="login__signin"
+              (click)="goToSignUp()">Sign Up</span>
+    </div>
+</form>

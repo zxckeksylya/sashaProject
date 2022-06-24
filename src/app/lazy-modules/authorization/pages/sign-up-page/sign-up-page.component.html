@@ -1,0 +1,63 @@
+<!-- <div class="content_auth card">
+    <h3>Sign Up</h3>
+    <form [formGroup]="signUpForm"
+          (ngSubmit)="authService.SignUp(userEmail.value, userPwd.value)">
+        <input type="email"
+               class=""
+               placeholder="Email Address"
+               formControlName="email"
+               #userEmail
+               required />
+        <input type="password"
+               class=""
+               placeholder="Password"
+               formControlName="password"
+               #userPwd
+               required />
+        <button [disabled]="signUpForm.invalid"
+                class="">
+            Sign Up
+        </button>
+    </form>
+
+    <span class="">Or</span>
+
+
+    <span>Already have an account?
+        <a class="redirect"
+           routerLink="/sign-in">Log In</a></span>
+</div> -->
+<form action=""
+      class="login__create"
+      [formGroup]="signUpForm"
+      (ngSubmit)="onSubmit()">
+    <h1 class="login__title">Sign Up</h1>
+
+    <app-text-control-with-icon formControlName="email"
+                                placeholder="Email">
+        <i class='bx bx-at control-icon'></i>
+
+    </app-text-control-with-icon>
+    <app-text-control-with-icon formControlName="username"
+                                placeholder="Username">
+        <i class='bx bx-user control-icon'></i>
+    </app-text-control-with-icon>
+
+
+    <app-text-control-with-icon formControlName="password"
+                                placeholder="Password">
+        <i class='bx bx-lock-alt control-icon'></i>
+    </app-text-control-with-icon>
+    <div class="checkboxs">
+        <app-checkbox-control formControlName="coach">Coach</app-checkbox-control>
+        <app-checkbox-control formControlName="student">Student</app-checkbox-control>
+    </div>
+
+    <app-button behaviorType="submit">Sign Up</app-button>
+
+    <div>
+        <span class="login__account">Already have an Account ?</span>
+        <span class="login__signup"
+              (click)="goToSignIn()">Sign In</span>
+    </div>
+</form>

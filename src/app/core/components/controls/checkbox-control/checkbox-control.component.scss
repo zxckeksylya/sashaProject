@@ -1,0 +1,11 @@
+.checkbox {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: inline;
+  color: var(--first-color);
+  padding: 2rem 1rem 0 1rem;
+  & input {
+    margin-right: 0.5rem;
+  }
+}
